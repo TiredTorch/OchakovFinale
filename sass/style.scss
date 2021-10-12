@@ -1,0 +1,76 @@
+@import "__nullStyle.scss";
+@import "__variables.scss";
+
+body{
+    font-family: $mainFont;
+    background-color: $SSColor;
+    header{
+        z-index: 200;
+        position: fixed;
+        width: 100%;
+        background-color: $MSColor;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        a{
+            img{
+                    overflow: hidden;
+                    width: 12vh;
+                    height: 12vh;
+                    margin: 10px 2vw;
+                    border-radius: 50%;
+            }
+        }
+        .header__items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .header__item{
+                margin: 2vw;
+                a{
+                    text-decoration: none;
+                    color: $SFColor;
+                    font-size: $largetitleFS;
+                }
+                &:last-child{
+                    margin-right: 4vw;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        header{
+            display: block;
+            .header__items{
+                //top: -100vh;
+                display: block;
+                z-index: 100;
+                position: absolute;
+                width: 100%;
+                flex-direction: column;
+                background-color: $MFColor;
+                text-align: center;
+                height: 100vh;
+
+                .header__item{
+                    margin: 4vh 0;
+                    &::after{
+                        display: block;
+                        content:"";
+                        background-color: $SSColor;
+                        width: 50%;
+                        height: 3px;
+                        margin: 2vh auto;
+                    }
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
