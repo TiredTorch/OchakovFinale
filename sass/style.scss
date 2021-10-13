@@ -1,6 +1,26 @@
 @import "__nullStyle.scss";
 @import "__variables.scss";
 
+button{
+    background-color: $SSColor;
+    color: $SFColor;
+    border: .5vh solid $SFColor;
+    width: 15vw;
+    height: 10vh;
+    font-size: $regularFS;
+    font-family: $mainFont;
+    transition: all .3s;
+
+    &:hover{
+        background-color: $SFColor;
+        border: .5vh solid $SSColor;
+        color: $SSColor;
+
+        transition: all .3s;
+
+    }
+}
+
 body{
     font-family: $mainFont;
     background-color: $SSColor;
@@ -152,6 +172,57 @@ body{
                         color: $SFColor;
                         font-size: $regularFS;
                         font-weight: 700;
+                    }
+                }
+            }
+        }
+        &.rooms{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            .room__slider{
+                width: 60%;
+                border: 1px solid black;
+                height: 77vh;
+
+                display: flex;
+                flex-direction: column-reverse;
+                .slider__item{
+                    background: url("../img/header_bg.jpg") repeat 0 0;
+                    .text__wrapper{
+                        width: 100%;
+                        height: 20vh;
+                        background-color: $MFColor;
+                        bottom: 0;
+                        padding: 1vh;
+                        
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        p{
+                            font-size: $regularFS;
+                            color: $SSColor;
+                        }
+                    }
+                }
+                
+            }
+            .room__preview{
+                width: 20%;
+
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+
+                .preview__item{
+                    margin-bottom: 3vh;
+                    a{
+                        img{
+                            border-radius:20% / 50%;
+                            height: 22vh;
+                            width: 15vw;
+                            border: 6px solid $MFColor;
+                        }
                     }
                 }
             }

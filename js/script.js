@@ -3,4 +3,7 @@ $(document).ready(function(){
         $('.header__items').toggleClass('active');
     });
     
+    $('.room__slider').slick({
+        arrows: false,
+    });
 }); 

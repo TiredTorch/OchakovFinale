@@ -42,6 +42,24 @@ ol, ul {
   src: url(../fonts/PlayfairDisplay-VariableFont_wght.ttf);
 }
 
+button {
+  background-color: #E0ECFA;
+  color: #30D5C8;
+  border: 0.5vh solid #30D5C8;
+  width: 15vw;
+  height: 10vh;
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  font-family: PlayfairDisplay;
+  transition: all .3s;
+}
+
+button:hover {
+  background-color: #30D5C8;
+  border: 0.5vh solid #E0ECFA;
+  color: #E0ECFA;
+  transition: all .3s;
+}
+
 body {
   font-family: PlayfairDisplay;
   background-color: #E0ECFA;
@@ -54,14 +72,9 @@ body header {
   position: fixed;
   width: 100%;
   background-color: #0f77ac;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 body header a img {
@@ -77,14 +90,9 @@ body header .header__burger {
 }
 
 body header .header__items {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 body header .header__items .header__item {
@@ -118,14 +126,9 @@ body section.title .title__cards {
   z-index: 1;
   width: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   top: 75vh;
 }
 
@@ -152,13 +155,8 @@ body section.title .title__cards .cards__item:last-child {
 
 body section.description {
   margin-top: 18vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -207,27 +205,17 @@ body section.advantages h4 {
 
 body section.advantages .advantages__items {
   padding: 1vh 1vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 body section.advantages .advantages__items .advantages__item {
   border-radius: 50% 20% / 10% 40%;
   padding: 2vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   width: 30%;
   background-color: #E0ECFA;
   margin: 4vh 0;
@@ -247,6 +235,58 @@ body section.advantages .advantages__items .advantages__item p {
   font-weight: 700;
 }
 
+body section.rooms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body section.rooms .room__slider {
+  width: 60%;
+  border: 1px solid black;
+  height: 77vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+body section.rooms .room__slider .slider__item {
+  background: url("../img/header_bg.jpg") repeat 0 0;
+}
+
+body section.rooms .room__slider .slider__item .text__wrapper {
+  width: 100%;
+  height: 20vh;
+  background-color: #449EDC;
+  bottom: 0;
+  padding: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body section.rooms .room__slider .slider__item .text__wrapper p {
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  color: #E0ECFA;
+}
+
+body section.rooms .room__preview {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+body section.rooms .room__preview .preview__item {
+  margin-bottom: 3vh;
+}
+
+body section.rooms .room__preview .preview__item a img {
+  border-radius: 20% / 50%;
+  height: 22vh;
+  width: 15vw;
+  border: 6px solid #449EDC;
+}
+
 @media (max-width: 768px) {
   body header {
     height: 16vh;
@@ -257,21 +297,12 @@ body section.advantages .advantages__items .advantages__item p {
     z-index: 102;
     background-color: #0f77ac;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   body header .wrapper .header__burger {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     margin: 3vh;
   }
   body header .wrapper .header__burger span {
@@ -285,17 +316,13 @@ body section.advantages .advantages__items .advantages__item p {
   }
   body header .header__items {
     overflow: hidden;
-    -webkit-transition: all .3s;
     transition: all .3s;
     top: -100vh;
     display: block;
     z-index: 100;
     position: absolute;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     background-color: #449EDC;
     text-align: center;
     height: 100vh;
@@ -318,7 +345,6 @@ body section.advantages .advantages__items .advantages__item p {
     margin-right: 0;
   }
   body header .header__items.active {
-    -webkit-transition: all .3s;
     transition: all .3s;
     top: 0vh;
   }
@@ -328,13 +354,8 @@ body section.advantages .advantages__items .advantages__item p {
   }
   body section.title .title__cards {
     top: 70vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   body section.title .title__cards .cards__item {
     height: 18vh;
