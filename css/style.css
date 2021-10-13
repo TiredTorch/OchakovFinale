@@ -48,6 +48,7 @@ body {
 }
 
 body header {
+  z-index: 100;
   height: 16vh;
   top: 0;
   position: fixed;
@@ -114,6 +115,7 @@ body section.title h3 {
 }
 
 body section.title .title__cards {
+  z-index: 1;
   width: 100%;
   position: absolute;
   display: -webkit-box;
@@ -224,6 +226,7 @@ body section.description p::after {
     background-color: #30D5C8;
   }
   body header .header__items {
+    overflow: hidden;
     -webkit-transition: all .3s;
     transition: all .3s;
     top: -100vh;
