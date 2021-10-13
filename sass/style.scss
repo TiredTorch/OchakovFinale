@@ -5,6 +5,8 @@ body{
     font-family: $mainFont;
     background-color: $SSColor;
     header{
+        height: 16vh;
+        top: 0;
         position: fixed;
         width: 100%;
         background-color: $MSColor;
@@ -31,7 +33,7 @@ body{
                 margin: 2vw;
                 a{
                     text-decoration: none;
-                    color: $SFColor;
+                    color: $SSColor;
                     font-size: $largetitleFS;
                 }
                 &:last-child{
@@ -41,11 +43,81 @@ body{
         }
 
     }
+    section{
+        &.title{
+            margin-top: 16vh;
+            background: url(../img/header_bg.jpg);
+            background-size: cover;
+            height: 80vh;
+            h3{
+                font-size: $largetitleFS;
+                color: $SFColor;
+                padding: 4vh 3vw;
+            }
+            .title__cards{
+                width: 100%;
+                position: absolute;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                top: 75vh;
+                .cards__item{
+                    height: 30vh;
+                    background-color: $MFColor;
+                    width: 25vw;
+                    color: $SSColor;
+                    h4{
+                        font-size: $titleFS;
+                        padding: 1vh 1vw;
+                    }
+                    p{
+                        padding: 1vh 1vw;
+                        font-size: $regularFS;
+                    }
+                    &:last-child{
+                        margin-top: 6vh;
+                    }
+                }
+            }
+        }
+        &.description{
+            margin-top: 18vh;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            h3{
+                margin: 2vh auto;
+                font-size: $largetitleFS;
+                color: $SFColor;
+                font-weight: 700;
+            }
+            p{
+                font-weight: 700;
+                width: 70%;
+                margin: 1vh auto;
+                color: $SFColor;
+                font-size: $regularFS;
+                text-align: center;
+                text-indent: 0vh;
+                line-height: 4vh;
+
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 80%;
+                    height: 4px;
+                    background-color: $SFColor;
+                    margin: 2vh auto;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
     body{
         header{
+            height: 16vh;
             display: block;
             
             z-index: 101;
@@ -103,6 +175,24 @@ body{
                 &.active{
                     transition: all .3s ;
                     top: 0vh;
+                }
+            }
+        }
+        section{
+            &.title{
+                h3{
+                    text-align: center;
+                    font-size: $largetitleFS;
+                }
+                .title__cards{
+                    top: 70vh;
+                    flex-direction: column;
+                    align-items: center;
+                    .cards__item{
+                        height: 18vh;
+                        width: 80vw;
+                        text-align: center;
+                    }
                 }
             }
         }
