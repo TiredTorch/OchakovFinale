@@ -6,5 +6,28 @@ $(document).ready(function(){
     $('.room__slider').slick({
         arrows: false,
         autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 2000,
+    });
+    $('.enviroment__slider').slick({
+        arrows: false,
+        autoplay: true,
+        speed: 800,
+        slidesToShow: 3,
+        centerMode: true,
+        autoplaySpeed: 1000,
+        responsive:[
+            {
+                breakpoint: 768,
+                settings:{
+                    slidesToShow: 1,
+                    speed: 800,
+                    arrows: false,
+                    autoplay: true,
+                    centerMode: true,
+                    autoplaySpeed: 1000,
+                }
+            }
+        ]
     });
 }); 

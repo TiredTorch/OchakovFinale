@@ -60,6 +60,10 @@ button:hover {
   transition: all .3s;
 }
 
+button:focus {
+  outline: none;
+}
+
 body {
   font-family: PlayfairDisplay;
   background-color: #E0ECFA;
@@ -298,10 +302,58 @@ body section.rooms .room__preview .preview__item {
 }
 
 body section.rooms .room__preview .preview__item a img {
+  transition: all .3s;
   border-radius: 20% / 50%;
   height: 22vh;
   width: 15vw;
   border: 6px solid #449EDC;
+}
+
+body section.rooms .room__preview .preview__item a img:hover {
+  transition: all .3s;
+  border: 6px solid #30D5C8;
+}
+
+body section.enviroment {
+  height: 58vh;
+  margin: 10vh 0;
+  background-color: #449EDC;
+}
+
+body section.enviroment h4 {
+  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  color: #30D5C8;
+  padding-top: 2vh;
+  width: 100%;
+  text-align: center;
+}
+
+body section.enviroment .enviroment__slider {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 100%;
+}
+
+body section.enviroment .enviroment__slider .slick-slide {
+  transition: all .3s;
+  filter: grayscale(0.5);
+}
+
+body section.enviroment .enviroment__slider .slick-slide.slick-center {
+  transition: all .3s;
+  transform: scale(1.15);
+  filter: grayscale(0);
+}
+
+body section.enviroment .enviroment__slider .slider__item {
+  filter: grayscale(0);
+}
+
+body section.enviroment .enviroment__slider .slider__item img {
+  border-radius: 91px 91px 91px 91px / 95px 95px 95px 95px;
+  width: 90%;
+  height: 40vh;
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -387,13 +439,21 @@ body section.rooms .room__preview .preview__item a img {
   }
   body section.rooms .room__slider {
     width: 90%;
+    height: 50vh;
+  }
+  body section.rooms .room__slider .slider__item img {
+    height: 50vh;
+  }
+  body section.rooms .room__slider .slider__item .text__wrapper {
+    top: 34vh;
+    height: 14vh;
   }
   body section.rooms .room__slider .slider__item .text__wrapper p {
     margin: auto;
     font-size: 20px;
   }
   body section.rooms .room__slider .slider__item .text__wrapper button {
-    width: 80%;
+    width: 60%;
     margin: auto;
     font-size: 20px;
     margin-top: 20px;

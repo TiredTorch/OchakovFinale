@@ -19,6 +19,9 @@ button{
         transition: all .3s;
 
     }
+    &:focus{
+        outline: none;
+    }
 }
 
 body{
@@ -236,13 +239,56 @@ body{
                     margin-bottom: 3vh;
                     a{
                         img{
+                            transition: all .3s;
                             border-radius:20% / 50%;
                             height: 22vh;
                             width: 15vw;
                             border: 6px solid $MFColor;
+                            &:hover{
+                                transition: all .3s;
+                                border: 6px solid $SFColor;
+                            }
                         }
                     }
                 }
+            }
+        }
+        &.enviroment{
+            height: 58vh;
+            margin: 10vh 0;
+            background-color: $MFColor;
+            h4{
+                font-size: $largetitleFS;
+                color: $SFColor;
+                padding-top: 2vh;
+                width: 100%;
+                text-align: center;
+            }
+            .enviroment__slider{
+                margin-top: 5vh;
+                margin-bottom: 5vh;
+                width: 100%;
+                .slick-slide{
+                    
+                    transition: all .3s;
+                    filter: grayscale(.5);
+                    &.slick-center{
+                        transition: all .3s;
+                        transform: scale(1.15);
+                        filter: grayscale(0);
+                    }
+                }
+                .slider__item{
+                    img{
+                        border-radius: 91px 91px 91px 91px / 95px 95px 95px 95px;
+                        width: 90%;
+                        height: 40vh;
+                        margin: auto;
+                    }
+                    
+                    filter: grayscale(0);
+                }
+                
             }
         }
     }
@@ -344,14 +390,20 @@ body{
             &.rooms{
                 .room__slider{
                     width: 90%;
+                    height: 50vh;
                     .slider__item{
+                        img{
+                            height: 50vh;
+                        }
                         .text__wrapper{
+                            top: 34vh;
+                            height: 14vh;
                             p{
                                 margin: auto;
                                 font-size: 20px;
                             }
                             button{
-                                width: 80%;
+                                width: 60%;
                                 margin: auto;
                                 font-size: 20px;
                                 margin-top: 20px;
