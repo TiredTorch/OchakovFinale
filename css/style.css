@@ -206,7 +206,7 @@ body section.pop-up form .pop-up__item label {
 }
 
 body section.pop-up form button {
-  margin: 7vh auto 0vh;
+  margin: 4vh auto 0vh;
   width: 50%;
 }
 
@@ -590,7 +590,7 @@ body section.map .position {
   body section.pop-up {
     top: 2vh;
     left: 5%;
-    width: 82%;
+    width: 80%;
     height: 90vh;
   }
   body section.title h3 {
