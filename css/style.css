@@ -99,13 +99,13 @@ body header .header__items {
 }
 
 body header .header__items .header__item {
-  margin: 2vw;
+  margin: 2vw 1vw;
 }
 
 body header .header__items .header__item a {
   text-decoration: none;
   color: #E0ECFA;
-  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  font-size: calc(28px + 25 * ((35vw - 320px) / 680));
   transition: all .3s;
 }
 
@@ -206,7 +206,7 @@ body section.description p::after {
 body section.advantages {
   background-color: #449EDC;
   width: 100%;
-  margin: 10vh 0;
+  margin: 0vh 0 5vh;
 }
 
 body section.advantages h4 {
@@ -216,6 +216,15 @@ body section.advantages h4 {
   padding-top: 2vh;
   color: #E0ECFA;
   font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+}
+
+body section.advantages h4::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 4px;
+  background-color: #E0ECFA;
+  margin: 2vh auto 1vh;
 }
 
 body section.advantages .advantages__items {
@@ -233,14 +242,13 @@ body section.advantages .advantages__items .advantages__item {
   justify-content: space-evenly;
   width: 30%;
   background-color: #E0ECFA;
-  margin: 4vh 0;
+  margin: 1vh 0;
 }
 
 body section.advantages .advantages__items .advantages__item img {
   overflow: hidden;
   width: 30%;
   height: 20vh;
-  border-radius: 50% 20% / 10% 40%;
 }
 
 body section.advantages .advantages__items .advantages__item p {
@@ -330,7 +338,7 @@ body section.rooms .room__preview .preview__item a img:hover {
 
 body section.enviroment {
   height: 58vh;
-  margin: 10vh 0;
+  margin: 5vh 0;
   background-color: #449EDC;
 }
 
@@ -371,7 +379,7 @@ body section.enviroment .enviroment__slider .slider__item img {
 }
 
 body section.map {
-  margin-top: 10vh;
+  margin-top: 5vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -464,6 +472,9 @@ body section.map .position {
   }
   body header .header__items .header__item {
     margin: 6vh 0;
+  }
+  body header .header__items .header__item a {
+    font-size: calc(42px + 6 * ((100vw - 320px) / 680));
   }
   body header .header__items .header__item:first-child {
     margin-top: 20vh;

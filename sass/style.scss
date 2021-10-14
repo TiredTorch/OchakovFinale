@@ -53,11 +53,11 @@ body{
             flex-wrap: wrap;
             justify-content: space-evenly;
             .header__item{
-                margin: 2vw;
+                margin: 2vw 1vw;
                 a{
                     text-decoration: none;
                     color: $SSColor;
-                    font-size: $largetitleFS;
+                    font-size: calc(28px + 25 * ((35vw - 320px) / 680));
                     transition: all .3s;
                     &:hover{
                         color: $SFColor;
@@ -149,7 +149,7 @@ body{
         &.advantages{
             background-color: $MFColor;
             width: 100%;
-            margin: 10vh 0;
+            margin: 0vh 0 5vh;
             h4{
                 width: 60vw;
                 text-align: center;
@@ -157,6 +157,14 @@ body{
                 padding-top: 2vh;
                 color: $SSColor;
                 font-size: $largetitleFS;
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 80%;
+                    height: 4px;
+                    background-color: $SSColor;
+                    margin: 2vh auto 1vh;
+                }
             }
             .advantages__items{
                 padding: 1vh 1vw;
@@ -172,12 +180,12 @@ body{
                     width: 30%;
                     
                     background-color: $SSColor;
-                    margin: 4vh 0;
+                    margin: 1vh 0;
                     img{
                         overflow: hidden;
                         width: 30%;
                         height: 20vh;
-                        border-radius:  50% 20% / 10% 40%;
+                        //border-radius:  50% 20% / 10% 40%;
                     }
                     p{
                         width: 55%;
@@ -267,7 +275,7 @@ body{
         }
         &.enviroment{
             height: 58vh;
-            margin: 10vh 0;
+            margin: 5vh 0;
             background-color: $MFColor;
             h4{
                 font-size: $largetitleFS;
@@ -304,7 +312,7 @@ body{
             }
         }
         &.map{
-            margin-top: 10vh;
+            margin-top: 5vh;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -397,6 +405,9 @@ body{
                 height: 100vh;
 
                 .header__item{
+                    a{
+                        font-size: $largetitleFS;
+                    }
                     &:first-child{
                         margin-top: 20vh;
                     }
