@@ -3,6 +3,8 @@ function ShowPopUp() {
 }
 
 $(document).ready(function(){
+    setTimeout("$('.pop-up').fadeIn(400)", 1000);
+
     $('.exit').click(function(event){
         $('.pop-up').fadeOut(400);
     });

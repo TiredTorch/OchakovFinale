@@ -120,6 +120,7 @@ body header .header__items .header__item:last-child {
 }
 
 body section.pop-up {
+  display: none;
   padding: 2vh;
   z-index: 300;
   position: fixed;

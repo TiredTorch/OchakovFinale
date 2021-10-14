@@ -74,6 +74,7 @@ body{
     }
     section{
         &.pop-up{
+            display: none;
             padding: 2vh;
             z-index: 300;
             position: fixed;
