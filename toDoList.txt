@@ -1,5 +1,5 @@
 footer + icons
-logo
+logo [DONE]
 feedback (email, number, name)
 popup window
 banner

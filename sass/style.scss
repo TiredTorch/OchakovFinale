@@ -127,6 +127,7 @@ body{
                 text-align: center;
             }
             p{
+                font-style: italic;
                 font-weight: 700;
                 width: 70%;
                 margin: 1vh auto;
@@ -274,7 +275,7 @@ body{
             }
         }
         &.enviroment{
-            height: 58vh;
+            height: 60vh;
             margin: 5vh 0;
             background-color: $MFColor;
             h4{
@@ -285,8 +286,8 @@ body{
                 text-align: center;
             }
             .enviroment__slider{
-                margin-top: 5vh;
-                margin-bottom: 5vh;
+                margin-top: 4vh;
+                padding-bottom: 1vh;
                 width: 100%;
                 .slick-slide{
                     

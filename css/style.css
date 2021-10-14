@@ -184,6 +184,7 @@ body section.description h3 {
 }
 
 body section.description p {
+  font-style: italic;
   font-weight: 700;
   width: 70%;
   margin: 1vh auto;
@@ -337,7 +338,7 @@ body section.rooms .room__preview .preview__item a img:hover {
 }
 
 body section.enviroment {
-  height: 58vh;
+  height: 60vh;
   margin: 5vh 0;
   background-color: #449EDC;
 }
@@ -351,8 +352,8 @@ body section.enviroment h4 {
 }
 
 body section.enviroment .enviroment__slider {
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  margin-top: 4vh;
+  padding-bottom: 1vh;
   width: 100%;
 }
 
