@@ -588,6 +588,7 @@ body section.map .position {
     top: 0vh;
   }
   body section.pop-up {
+    top: 2vh;
     left: 5%;
     width: 82%;
     height: 90vh;
