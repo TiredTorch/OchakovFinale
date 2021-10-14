@@ -249,19 +249,22 @@ body section.rooms .room__slider {
   flex-direction: column-reverse;
 }
 
-body section.rooms .room__slider .slider__item {
-  background: url("../img/header_bg.jpg") repeat 0 0;
+body section.rooms .room__slider .slider__item img {
+  position: relative;
+  width: 100%;
+  height: 77vh;
 }
 
 body section.rooms .room__slider .slider__item .text__wrapper {
-  width: 100%;
+  position: absolute;
+  background-color: #449fdc7c;
+  width: 14.1%;
   height: 20vh;
-  background-color: #449EDC;
-  bottom: 0;
-  padding: 1vh;
+  top: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 1vh;
 }
 
 body section.rooms .room__slider .slider__item .text__wrapper p {
@@ -364,6 +367,13 @@ body section.rooms .room__preview .preview__item a img {
   }
   body section.advantages .advantages__items .advantages__item {
     width: 40%;
+  }
+  body section.rooms .room__slider {
+    width: 90%;
+  }
+  body section.rooms .room__preview {
+    display: none;
+    width: 0%;
   }
 }
 

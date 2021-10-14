@@ -188,22 +188,27 @@ body{
                 display: flex;
                 flex-direction: column-reverse;
                 .slider__item{
-                    background: url("../img/header_bg.jpg") repeat 0 0;
-                    .text__wrapper{
-                        width: 100%;
-                        height: 20vh;
-                        background-color: $MFColor;
-                        bottom: 0;
-                        padding: 1vh;
-                        
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                        p{
-                            font-size: $regularFS;
-                            color: $SSColor;
-                        }
-                    }
+                   img{
+                       position: relative;
+                       width: 100%;
+                       height: 77vh;
+                   }
+                   .text__wrapper{
+                       position: absolute;
+                       background-color: #449fdc7c;
+                       width: 14.1%;
+                       height: 20vh;
+                       top: 55vh;
+
+                       display: flex;
+                       flex-direction: column;
+                       justify-content: space-between;
+                       padding: 1vh;
+                       p{
+                           font-size: $regularFS;
+                           color: $SSColor;
+                       }
+                   }
                 }
                 
             }
@@ -317,6 +322,15 @@ body{
                     .advantages__item{
                         width: 40%;
                     }
+                }
+            }
+            &.rooms{
+                .room__slider{
+                    width: 90%;
+                }
+                .room__preview{
+                    display: none;
+                    width: 0%;
                 }
             }
         }

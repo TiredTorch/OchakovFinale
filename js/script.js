@@ -5,5 +5,6 @@ $(document).ready(function(){
     
     $('.room__slider').slick({
         arrows: false,
+        autoplay: true,
     });
 }); 
