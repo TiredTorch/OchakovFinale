@@ -10,6 +10,28 @@
     <title>Vokacho || Хостел "Вокачо" || Ночлег в Очакове</title>
 </head>
 <body>
+    <section class="pop-up">
+        <div class="exit">
+            <span></span>
+            <span></span>
+        </div>
+        <h4>Напишите нам</h4>
+        <form action="">
+            <div class="pop-up__item">
+                <input type="text">
+                <label>Ваше имя</label>
+            </div>
+            <div class="pop-up__item">
+                <input type="email">
+                <label>Ваша почта</label>
+            </div>
+            <div class="pop-up__item">
+                <input type="number">
+                <label>Ваш номер</label>
+            </div>
+            <button>Написать</button>
+        </form>
+    </section>
     <header>
         <div class="wrapper">
             <a href="#">
@@ -35,7 +57,7 @@
                 <a href="#">Об Очакове</a>
             </div>
             <div class="header__item">
-                <a href="#">Заказать</a>
+                <a onclick="ShowPopUp()">Заказать</a>
             </div>
         </div>
     </header>

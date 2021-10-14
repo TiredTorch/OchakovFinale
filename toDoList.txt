@@ -1,7 +1,7 @@
 footer + icons
 logo [DONE]
-feedback (email, number, name)
-popup window
-banner
+feedback (email, number, name) [DONE]
+popup window [DONE]
+banner [DONE]
 
 figma

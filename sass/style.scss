@@ -55,6 +55,7 @@ body{
             .header__item{
                 margin: 2vw 1vw;
                 a{
+                    cursor: pointer;
                     text-decoration: none;
                     color: $SSColor;
                     font-size: calc(28px + 25 * ((35vw - 320px) / 680));
@@ -72,6 +73,86 @@ body{
 
     }
     section{
+        &.pop-up{
+            padding: 2vh;
+            z-index: 300;
+            position: fixed;
+            border: .3vw solid $SFColor;
+            border-radius: 10px;
+            background-color: $SSColor;
+            width: 60%;
+            left: 18%;
+            top: 5vh;
+            height: 80vh;
+            .exit{
+                span{
+                    position: absolute;
+                    right: 10px;
+                    display: block;
+                    content:"";
+                    width: 40px;
+                    height: 5px;
+                    background-color: $SFColor;
+                    &:first-child{
+                        transform: rotate(50deg);
+                    }
+                    &:last-child{
+                        transform: rotate(-50deg);
+                    }
+                }
+            }
+            h4{
+                font-style: italic;
+                color: $MSColor;
+                font-weight: 700;
+                font-size: $largetitleFS;
+                margin: 0vh auto 4vh;
+                width: 90%;
+                text-align: center;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .pop-up__item{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                    input{
+                        font-family: $mainFont;
+                        border: 1px solid $MFColor;
+                        width: 60%;
+                        height: 6vh;
+                        margin: auto;
+
+                        font-size: $titleFS;
+                        color: $SFColor;
+                        padding: 0 2vh;
+                        &:focus{
+                            outline: none;
+                        }
+                        &::-webkit-outer-spin-button{
+                            appearance: none;
+                        }
+                        &::-webkit-inner-spin-button{
+                            appearance: none;
+                        }
+                    }
+                    label{
+                        color: $MFColor;
+                        width: 30%;
+                        text-align: center;
+                        margin: 3vh auto;
+                        font-size: $titleFS;
+                    }
+                }
+                button{
+                    margin: 7vh auto 0vh;
+                    width: 50%;
+                }
+            }
+        }
         &.title{
             margin-top: 13vh;
             background: url(../img/header_bg.jpg);
@@ -292,7 +373,7 @@ body{
                 .slick-slide{
                     
                     transition: all .3s;
-                    filter: grayscale(.5);
+                    filter: grayscale(1);
                     &.slick-center{
                         transition: all .3s;
                         transform: scale(1.15);
@@ -432,6 +513,11 @@ body{
             }
         }
         section{
+            &.pop-up{
+                left: 5%;
+                width: 82%;
+                height: 90vh;
+            }
             &.title{
                 h3{
                     text-align: center;

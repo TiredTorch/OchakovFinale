@@ -103,6 +103,7 @@ body header .header__items .header__item {
 }
 
 body header .header__items .header__item a {
+  cursor: pointer;
   text-decoration: none;
   color: #E0ECFA;
   font-size: calc(28px + 25 * ((35vw - 320px) / 680));
@@ -116,6 +117,96 @@ body header .header__items .header__item a:hover {
 
 body header .header__items .header__item:last-child {
   margin-right: 4vw;
+}
+
+body section.pop-up {
+  padding: 2vh;
+  z-index: 300;
+  position: fixed;
+  border: 0.3vw solid #30D5C8;
+  border-radius: 10px;
+  background-color: #E0ECFA;
+  width: 60%;
+  left: 18%;
+  top: 5vh;
+  height: 80vh;
+}
+
+body section.pop-up .exit span {
+  position: absolute;
+  right: 10px;
+  display: block;
+  content: "";
+  width: 40px;
+  height: 5px;
+  background-color: #30D5C8;
+}
+
+body section.pop-up .exit span:first-child {
+  transform: rotate(50deg);
+}
+
+body section.pop-up .exit span:last-child {
+  transform: rotate(-50deg);
+}
+
+body section.pop-up h4 {
+  font-style: italic;
+  color: #0f77ac;
+  font-weight: 700;
+  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  margin: 0vh auto 4vh;
+  width: 90%;
+  text-align: center;
+}
+
+body section.pop-up form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+body section.pop-up form .pop-up__item {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body section.pop-up form .pop-up__item input {
+  font-family: PlayfairDisplay;
+  border: 1px solid #449EDC;
+  width: 60%;
+  height: 6vh;
+  margin: auto;
+  font-size: calc(28px + 7 * ((100vw - 320px) / 680));
+  color: #30D5C8;
+  padding: 0 2vh;
+}
+
+body section.pop-up form .pop-up__item input:focus {
+  outline: none;
+}
+
+body section.pop-up form .pop-up__item input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+body section.pop-up form .pop-up__item input::-webkit-inner-spin-button {
+  appearance: none;
+}
+
+body section.pop-up form .pop-up__item label {
+  color: #449EDC;
+  width: 30%;
+  text-align: center;
+  margin: 3vh auto;
+  font-size: calc(28px + 7 * ((100vw - 320px) / 680));
+}
+
+body section.pop-up form button {
+  margin: 7vh auto 0vh;
+  width: 50%;
 }
 
 body section.title {
@@ -359,7 +450,7 @@ body section.enviroment .enviroment__slider {
 
 body section.enviroment .enviroment__slider .slick-slide {
   transition: all .3s;
-  filter: grayscale(0.5);
+  filter: grayscale(1);
 }
 
 body section.enviroment .enviroment__slider .slick-slide.slick-center {
@@ -494,6 +585,11 @@ body section.map .position {
   body header .header__items.active {
     transition: all .3s;
     top: 0vh;
+  }
+  body section.pop-up {
+    left: 5%;
+    width: 82%;
+    height: 90vh;
   }
   body section.title h3 {
     text-align: center;

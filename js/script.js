@@ -1,8 +1,15 @@
+function ShowPopUp() {
+    $('.pop-up').fadeIn(400);
+}
+
 $(document).ready(function(){
+    $('.exit').click(function(event){
+        $('.pop-up').fadeOut(400);
+    });
+
     $('.header__burger').click(function(event){
         $('.header__items').toggleClass('active');
     });
-    
     $('.room__slider').slick({
         arrows: false,
         autoplay: true,
