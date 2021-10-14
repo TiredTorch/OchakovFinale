@@ -478,6 +478,11 @@ body{
             }
             &.map{
                 margin-top: 0;
+                .description{
+                    button{
+                        width: 90%;
+                    }
+                }
             }
         }
     }

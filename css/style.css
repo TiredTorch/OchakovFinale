@@ -531,6 +531,9 @@ body section.map .position {
   body section.map {
     margin-top: 0;
   }
+  body section.map .description button {
+    width: 90%;
+  }
 }
 
 @media (max-width: 520px) {
