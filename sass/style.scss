@@ -59,6 +59,11 @@ body{
                     text-decoration: none;
                     color: $SSColor;
                     font-size: $largetitleFS;
+                    transition: all .3s;
+                    &:hover{
+                        color: $SFColor;
+                        transition: all .3s;
+                    }
                 }
                 &:last-child{
                     margin-right: 4vw;
@@ -195,6 +200,14 @@ body{
                 text-align: center;
                 color: $SFColor;
                 margin-bottom: 3vh;
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 80%;
+                    height: 4px;
+                    background-color: $SFColor;
+                    margin: 1vh auto 0;
+                }
             }
             .room__slider{
                 border: 2px solid $MFColor;
@@ -259,7 +272,7 @@ body{
             background-color: $MFColor;
             h4{
                 font-size: $largetitleFS;
-                color: $SFColor;
+                color: $SSColor;
                 padding-top: 2vh;
                 width: 100%;
                 text-align: center;
@@ -291,13 +304,61 @@ body{
                 
             }
         }
+        &.map{
+            margin-top: 10vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+    
+            h4{
+                width: 100%;
+                font-size: $largetitleFS;
+                color: $SFColor;
+                margin-bottom: 3vh;
+                text-align: center;
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 80%;
+                    height: 4px;
+                    background-color: $SFColor;
+                    margin: 1vh auto 0;
+                }
+            }
+            .description{
+                padding: 2%;
+                width: 26%;
+                background-color: $MFColor;
+    
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                img{
+    
+                    width: 5vw;
+                    height: 5vh;
+                }
+                p{
+                    color: $SSColor;
+                    width: 80%;
+                    font-size: $regularFS;
+                }
+                button{
+                    margin: auto;
+                }
+    
+            }
+            .position{
+                width: 70%;
+            }
+        }
     }
 }
 
 @media (max-width: 768px) {
     body{
         header{
-            height: 16vh;
+            height: 13vh;
             display: block;
             
             z-index: 101;
@@ -396,8 +457,8 @@ body{
                             height: 50vh;
                         }
                         .text__wrapper{
-                            top: 34vh;
-                            height: 14vh;
+                            top: 30vh;
+                            height: 18vh;
                             p{
                                 margin: auto;
                                 font-size: 20px;
@@ -415,6 +476,9 @@ body{
                     display: none;
                     width: 0%;
                 }
+            }
+            &.map{
+                margin-top: 0;
             }
         }
     }
@@ -434,6 +498,23 @@ body{
                     }
                 }
             }
+            &.rooms{
+                .room__slider{
+                    .slider__item{
+                        .text__wrapper{
+                            p{
+                                font-size: 18px;
+                                
+                            }
+                            button{
+                                margin-top: 8px;
+                                width: 90%;
+                            }
+                        }
+                    }
+                }
+            }
+            
         }
     }
 }

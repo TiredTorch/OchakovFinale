@@ -107,6 +107,12 @@ body header .header__items .header__item a {
   text-decoration: none;
   color: #E0ECFA;
   font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  transition: all .3s;
+}
+
+body header .header__items .header__item a:hover {
+  color: #30D5C8;
+  transition: all .3s;
 }
 
 body header .header__items .header__item:last-child {
@@ -259,6 +265,15 @@ body section.rooms h4 {
   margin-bottom: 3vh;
 }
 
+body section.rooms h4::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 4px;
+  background-color: #30D5C8;
+  margin: 1vh auto 0;
+}
+
 body section.rooms .room__slider {
   border: 2px solid #449EDC;
   width: 60%;
@@ -322,7 +337,7 @@ body section.enviroment {
 
 body section.enviroment h4 {
   font-size: calc(42px + 6 * ((100vw - 320px) / 680));
-  color: #30D5C8;
+  color: #E0ECFA;
   padding-top: 2vh;
   width: 100%;
   text-align: center;
@@ -356,9 +371,61 @@ body section.enviroment .enviroment__slider .slider__item img {
   margin: auto;
 }
 
+body section.map {
+  margin-top: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body section.map h4 {
+  width: 100%;
+  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  color: #30D5C8;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+body section.map h4::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 4px;
+  background-color: #30D5C8;
+  margin: 1vh auto 0;
+}
+
+body section.map .description {
+  padding: 2%;
+  width: 26%;
+  background-color: #449EDC;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+body section.map .description img {
+  width: 5vw;
+  height: 5vh;
+}
+
+body section.map .description p {
+  color: #E0ECFA;
+  width: 80%;
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+}
+
+body section.map .description button {
+  margin: auto;
+}
+
+body section.map .position {
+  width: 70%;
+}
+
 @media (max-width: 768px) {
   body header {
-    height: 16vh;
+    height: 13vh;
     display: block;
     z-index: 101;
   }
@@ -445,8 +512,8 @@ body section.enviroment .enviroment__slider .slider__item img {
     height: 50vh;
   }
   body section.rooms .room__slider .slider__item .text__wrapper {
-    top: 34vh;
-    height: 14vh;
+    top: 30vh;
+    height: 18vh;
   }
   body section.rooms .room__slider .slider__item .text__wrapper p {
     margin: auto;
@@ -462,6 +529,9 @@ body section.enviroment .enviroment__slider .slider__item img {
     display: none;
     width: 0%;
   }
+  body section.map {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 520px) {
@@ -470,5 +540,12 @@ body section.enviroment .enviroment__slider .slider__item img {
   }
   body section.advantages .advantages__items .advantages__item p {
     font-size: 20px;
+  }
+  body section.rooms .room__slider .slider__item .text__wrapper p {
+    font-size: 18px;
+  }
+  body section.rooms .room__slider .slider__item .text__wrapper button {
+    margin-top: 8px;
+    width: 90%;
   }
 }
