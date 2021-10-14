@@ -26,7 +26,7 @@ body{
     background-color: $SSColor;
     header{
         z-index: 100;
-        height: 16vh;
+        height: 13vh;
         top: 0;
         position: fixed;
         width: 100%;
@@ -37,8 +37,8 @@ body{
         a{
             img{
                     overflow: hidden;
-                    width: 12vh;
-                    height: 12vh;
+                    width: 10vh;
+                    height: 10vh;
                     margin: 10px 2vw;
                     border-radius: 50%;
             }
@@ -66,7 +66,7 @@ body{
     }
     section{
         &.title{
-            margin-top: 16vh;
+            margin-top: 13vh;
             background: url(../img/header_bg.jpg);
             background-size: cover;
             height: 80vh;
@@ -84,6 +84,7 @@ body{
                 justify-content: space-evenly;
                 top: 75vh;
                 .cards__item{
+                    transition: all .3s;
                     height: 30vh;
                     background-color: $MFColor;
                     width: 25vw;
@@ -98,6 +99,10 @@ body{
                     }
                     &:last-child{
                         margin-top: 6vh;
+                    }
+                    &:hover{
+                        transition: all .3s;
+                        box-shadow: 0 0 10px black;
                     }
                 }
             }
@@ -174,15 +179,23 @@ body{
                         font-weight: 700;
                     }
                 }
+                
             }
         }
         &.rooms{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
+            h4{
+                width: 100%;
+                font-size: $largetitleFS;
+                text-align: center;
+                color: $SFColor;
+                margin-bottom: 3vh;
+            }
             .room__slider{
+                border: 2px solid $MFColor;
                 width: 60%;
-                border: 1px solid black;
                 height: 77vh;
 
                 display: flex;
@@ -321,12 +334,30 @@ body{
                 .advantages__items{ 
                     .advantages__item{
                         width: 40%;
+                        p{
+                            
+                            font-size: 20px;
+                        }
                     }
                 }
             }
             &.rooms{
                 .room__slider{
                     width: 90%;
+                    .slider__item{
+                        .text__wrapper{
+                            p{
+                                margin: auto;
+                                font-size: 20px;
+                            }
+                            button{
+                                width: 80%;
+                                margin: auto;
+                                font-size: 20px;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
                 }
                 .room__preview{
                     display: none;
@@ -337,7 +368,7 @@ body{
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 520px) {
     body{
         section{
             &.advantages{

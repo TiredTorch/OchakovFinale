@@ -67,7 +67,7 @@ body {
 
 body header {
   z-index: 100;
-  height: 16vh;
+  height: 13vh;
   top: 0;
   position: fixed;
   width: 100%;
@@ -79,8 +79,8 @@ body header {
 
 body header a img {
   overflow: hidden;
-  width: 12vh;
-  height: 12vh;
+  width: 10vh;
+  height: 10vh;
   margin: 10px 2vw;
   border-radius: 50%;
 }
@@ -110,7 +110,7 @@ body header .header__items .header__item:last-child {
 }
 
 body section.title {
-  margin-top: 16vh;
+  margin-top: 13vh;
   background: url(../img/header_bg.jpg);
   background-size: cover;
   height: 80vh;
@@ -133,6 +133,7 @@ body section.title .title__cards {
 }
 
 body section.title .title__cards .cards__item {
+  transition: all .3s;
   height: 30vh;
   background-color: #449EDC;
   width: 25vw;
@@ -151,6 +152,11 @@ body section.title .title__cards .cards__item p {
 
 body section.title .title__cards .cards__item:last-child {
   margin-top: 6vh;
+}
+
+body section.title .title__cards .cards__item:hover {
+  transition: all .3s;
+  box-shadow: 0 0 10px black;
 }
 
 body section.description {
@@ -241,9 +247,17 @@ body section.rooms {
   justify-content: space-evenly;
 }
 
+body section.rooms h4 {
+  width: 100%;
+  font-size: calc(42px + 6 * ((100vw - 320px) / 680));
+  text-align: center;
+  color: #30D5C8;
+  margin-bottom: 3vh;
+}
+
 body section.rooms .room__slider {
+  border: 2px solid #449EDC;
   width: 60%;
-  border: 1px solid black;
   height: 77vh;
   display: flex;
   flex-direction: column-reverse;
@@ -368,8 +382,21 @@ body section.rooms .room__preview .preview__item a img {
   body section.advantages .advantages__items .advantages__item {
     width: 40%;
   }
+  body section.advantages .advantages__items .advantages__item p {
+    font-size: 20px;
+  }
   body section.rooms .room__slider {
     width: 90%;
+  }
+  body section.rooms .room__slider .slider__item .text__wrapper p {
+    margin: auto;
+    font-size: 20px;
+  }
+  body section.rooms .room__slider .slider__item .text__wrapper button {
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 20px;
   }
   body section.rooms .room__preview {
     display: none;
@@ -377,7 +404,7 @@ body section.rooms .room__preview .preview__item a img {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 520px) {
   body section.advantages .advantages__items .advantages__item {
     width: 80%;
   }
