@@ -1,0 +1,7 @@
+footer + icons
+logo
+feedback (email, number, name)
+popup window
+banner
+
+figma
