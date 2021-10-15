@@ -1,4 +1,4 @@
-footer + icons
+footer + icons [DONE]
 logo [DONE]
 feedback (email, number, name) [DONE]
 popup window [DONE]

@@ -523,6 +523,79 @@ body section.map .position {
   width: 70%;
 }
 
+body footer {
+  margin-top: 1vh;
+  width: 100%;
+  background-color: #449EDC;
+  display: flex;
+  flex-direction: column;
+}
+
+body footer .links {
+  padding: 5vh 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body footer .links .link__item {
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+body footer .links .link__item h4 {
+  font-size: calc(28px + 7 * ((100vw - 320px) / 680));
+  color: #E0ECFA;
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-weight: 700;
+}
+
+body footer .links .link__item h4::after {
+  display: block;
+  content: "";
+  width: 80%;
+  height: 3px;
+  background-color: #E0ECFA;
+  margin: 2vh auto 0;
+}
+
+body footer .links .link__item span {
+  width: 100%;
+  color: #E0ECFA;
+  margin: 1vh 0;
+}
+
+body footer .links .link__item span img {
+  width: 2vh;
+  height: 2vh;
+}
+
+body footer .links .link__item a {
+  margin: 1vh 0;
+  color: #E0ECFA;
+  width: 100%;
+  transition: all .3s;
+}
+
+body footer .links .link__item a:hover {
+  color: #30D5C8;
+  transition: all .3s;
+}
+
+body footer .copyright {
+  padding: 2vh 0;
+  width: 100%;
+  text-align: center;
+  font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+  color: #0f77ac;
+}
+
 @media (max-width: 768px) {
   body header {
     height: 13vh;
@@ -659,5 +732,8 @@ body section.map .position {
   body section.rooms .room__slider .slider__item .text__wrapper button {
     margin-top: 8px;
     width: 90%;
+  }
+  body footer .links .link__item {
+    width: 80%;
   }
 }
